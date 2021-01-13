@@ -35,22 +35,22 @@
 }
 
 .dropdown_menu {
-    color: var(--color-secondary);
-    border: 1px solid var(--color-secondary);
+    color: var(--color-primary);
+    background-color: var(--color-primary);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
+    border-radius: 2px;
 }
 
+
 .dropdown_menu_item {
-    color: var(--color-secondary);
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
-
 }
 
 .menu_item_text {
@@ -58,7 +58,7 @@
 }
 
 .menu_item_text:hover {
-    color:var(--color-secondary);
+    color: var(--color-secondary);
     text-decoration: none;
 }
   

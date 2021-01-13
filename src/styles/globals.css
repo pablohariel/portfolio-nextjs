@@ -27,6 +27,30 @@ a {
   box-sizing: border-box;
 }
 
+div.LanguageSelector_dropdown_menu__24QgS {
+  transform: translate(-20%, 120%) !important;
+  width: 100px;
+}
+
+a.dropdown-item {
+  width: 100px;
+  border: 1px solid var(--color-secondary);
+}
+
+@media only screen and (max-width: 600px) {
+  div.LanguageSelector_dropdown_menu__24QgS {
+    font-size: 10px;
+    width: 50px;
+    transform: translate(-14%, 120%) !important;
+  }
+  a.dropdown-item {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 a.dropdown-item:hover {
   background-color: var(--color-primary);
 }
