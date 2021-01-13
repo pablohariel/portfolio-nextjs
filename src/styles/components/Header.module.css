@@ -1,0 +1,90 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 14vh;
+  min-height: 100px;
+  max-height: 14vh;
+  width: 100vw;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    padding: 20px;
+    height: 10vh;
+    min-height: 100px;
+  }
+}
+
+.header_left {
+  justify-content: flex-start;
+  flex: 1;
+  min-height: 100px;
+  height: 12vh;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+}
+
+.logo {
+  width: 50px;
+  transition: 0.8s;
+}
+
+@media only screen and (max-width: 600px) {
+  .logo {
+    width: 30px;
+  }
+}
+
+.header_right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 100px;
+  height: 12vh; 
+}
+
+.header_right_item {
+  border: 1px solid yellow;
+  margin: 0
+}
+
+.github_img {
+  eight: 50px;
+  width: 50px;
+  margin-right: 10px;
+  transition: 0.8s;
+}
+
+.github_img:hover {
+  opacity: 70%;
+}
+
+.linkedin_img {
+  height: 50px;
+  width: 50px;
+  transition: 0.8s;
+}
+
+.linkedin_img:hover {
+  opacity: 70%;
+}
+
+@media only screen and (max-width: 600px) {
+  .github_img {
+    width: 30px;
+  }
+  .linkedin_img {
+    width: 30px;
+  }
+}
+
+
+
+
+
+
