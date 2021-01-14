@@ -10,9 +10,9 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-p, h2, h1, a {
+p, h2, h1, a, h3, h4 {
   font-family: 'Unlock', cursive;
-  color: var(--color-secondary)
+  color: var(--color-secondary);
 }
 
 nav > ul > li > a {
