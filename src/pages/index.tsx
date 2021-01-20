@@ -46,8 +46,6 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   let btns: string[]
   let description = ''
 
-  console.log(btns)
-
   if (locale === 'en') {
     description = data.en.description
     btns = data.en.btns

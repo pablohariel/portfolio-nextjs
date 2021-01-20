@@ -10,13 +10,13 @@ interface Props {
 
 const About: React.FC<Props> = (props) => {
   return (
-      <div className={styles.main}>
-        <Header pageRole='secondary' />
-        <div className={styles.body}>
-          <h1 className={styles.title}>{props.title}</h1>
-          <p className={styles.description}>{props.description}</p>
-        </div>
+    <div className={styles.main}>
+      <Header pageRole='secondary' />
+      <div className={styles.body}>
+        <h1 className={styles.title}>{props.title}</h1>
+        <p className={styles.description}>{props.description}</p>
       </div>
+    </div>
   )
 }
 

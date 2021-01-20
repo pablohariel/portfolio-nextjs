@@ -52,8 +52,6 @@ const CustomMenu = React.forwardRef(
 )
 
 const LanguageSelector: React.FC<Props> = ({ pageTitle = '', pageDescription = '' }) => {
-  console.log(useRouter().pathname)
-
   return (
     <>
       <Head>

@@ -4,6 +4,7 @@ html,
 body {
   --color-primary: #2F3437;
   --color-secondary: #FFF;
+  --color-hover: #464649;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -52,7 +53,8 @@ a.dropdown-item {
 }
 
 a.dropdown-item:hover {
-  background-color: var(--color-primary);
+  background-color: #464649;
+
 }
 
 a.dropdown-item:active {
