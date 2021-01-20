@@ -1,48 +1,39 @@
-import { GetStaticProps } from "next";
-import LanguageSelector from '../components/languageSelector';
-import Header from '../components/header';
-import Footer from '../components/footer';
-import styles from '../styles/pages/Home.module.css';
-import { IoOpenOutline } from "react-icons/io5";
-import Logo from '../assets/logo.svg'
-import colors from '../config/colors'
+import { GetStaticProps } from 'next'
+import Header from '../components/header'
+import Footer from '../components/footer'
+import styles from '../styles/pages/Home.module.css'
+import Link from 'next/link'
+import data from '../store/pages/home'
 
 interface Props {
-  pageTitle: string,
-  pageDescription: string,
-  posts: [{
-    title: string,
-    content: string
-  }],
+  description: string,
+  btns: string[],
 }
 
-const Blog: React.FC<Props> = ({ posts, pageTitle, pageDescription }) => {
+const Blog: React.FC<Props> = ({ description, btns }) => {
   return (
-    <div className={styles.main}> 
-      <Header />
-      <div className={styles.body}> 
+    <div className={styles.main}>
+      <Header pageRole='main' />
+      <div className={styles.body}>
         <div className={styles.info}>
           <h1 className={styles.name}>Pablo Hariel</h1>
-          <p className={styles.description}>Programador Web full stack, com foco em tecnologias modernas como React.js e Node.js</p>
+          <p className={styles.description}>{description}</p>
         </div>
         <div className={styles.btns}>
           <div className={styles.btn}>
-            <p className={styles.btn_text}>Projetos</p> 
-            {/* <div className={styles.btn_icon}>
-              <IoOpenOutline size='100%' color={colors.color_secondary} />
-            </div> */}
+            <Link href='/projects'>
+              <p className={styles.btn_text}>{btns[0]}</p>
+            </Link>
           </div>
           <div className={styles.btn}>
-            <p className={styles.btn_text}>Experiencia</p>
-            {/* <div className={styles.btn_icon}>
-              <IoOpenOutline size='100%' color={colors.color_secondary} />
-            </div> */}
+            <Link href='/experience'>
+              <p className={styles.btn_text}>{btns[1]}</p>
+            </Link>
           </div>
           <div className={styles.btn}>
-            <p className={styles.btn_text}>Sobre</p>
-            {/* <div className={styles.btn_icon}>
-              <IoOpenOutline size='100%' color={colors.color_secondary} />
-            </div> */}
+            <Link href='/about'>
+              <p className={styles.btn_text}>{btns[2]}</p>
+            </Link>
           </div>
         </div>
       </div>
@@ -52,55 +43,27 @@ const Blog: React.FC<Props> = ({ posts, pageTitle, pageDescription }) => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  let posts = [];
-  let pageTitle = '';
-  let pageDescription = '';
+  let btns: string[]
+  let description = ''
 
-  if(locale === 'en') {
-    pageTitle = 'Next.JS | EN';
-    pageDescription = 'next.js with internationalized routing';
-    posts = [
-      {
-        title: "Post One",
-        content: "This is the first post"
-      },
-      {
-        title: "Post Two",
-        content: "This is the second post"
-      },
-      {
-        title: "Post Three",
-        content: "This is the third post"
-      }
-    ]
+  console.log(btns)
+
+  if (locale === 'en') {
+    description = data.en.description
+    btns = data.en.btns
   }
 
-  if(locale === 'pt') {
-    pageTitle = 'Next.JS | PT';
-    pageDescription = 'next.js com sistema de rotas internacionais';
-    posts = [
-      {
-        title: "Primeiro Post",
-        content: "Esse é o primeiro post"
-      },
-      {
-        title: "Segundo Post",
-        content: "Esse é o segundo post"
-      },
-      {
-        title: "Terceiro Post",
-        content: "Esse é o terceiro post"
-      }
-    ]
+  if (locale === 'pt') {
+    description = data.pt.description
+    btns = data.pt.btns
   }
 
-  return { 
+  return {
     props: {
-      pageTitle,
-      pageDescription,
-      posts
+      description,
+      btns
     }
   }
 }
-  
-export default Blog;
+
+export default Blog

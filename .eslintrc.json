@@ -7,7 +7,7 @@
     "extends": [
         "plugin:react/recommended",
         "standard",
-        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -23,8 +23,12 @@
     ],
     "rules": {
         "react/react-in-jsx-scope": "off",
-        "space-before-function-paren": "off",
+        // "space-before-function-paren": "off",
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": ["error"],
         "react/prop-types": "off",
-        "IntrinsicAttributes": "off"
+        "IntrinsicAttributes": "off",
+        "react/display-name": "off"
+
     }
 }

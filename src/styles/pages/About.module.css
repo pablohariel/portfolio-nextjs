@@ -1,0 +1,23 @@
+.main {
+    background-color: var(--color-primary);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 30vh;
+}
+
+.title {
+    color: var(--color-secondary);
+}
+
+.description {
+    color: var(--color-secondary);
+}

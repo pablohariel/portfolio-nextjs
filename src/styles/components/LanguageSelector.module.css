@@ -34,6 +34,21 @@
     }
 }
 
+@media only screen and (max-width: 300px) {
+    .dropdown {
+        width: 44px;
+        margin-right: 8px;
+    }
+    .dropdown_text {
+        font-size: 10px;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    .dropdown_icon {
+        width: 12px;
+    }
+}
+
 .dropdown_menu {
     color: var(--color-primary);
     background-color: var(--color-primary);
